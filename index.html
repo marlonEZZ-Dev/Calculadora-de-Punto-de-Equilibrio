@@ -20,7 +20,7 @@
         </p>
         <input 
         class="inputs"
-        name="txfPrice"
+        id="txfPrice"
         type="number"
         placeholder="Ingrese sólo números" 
         required 
@@ -32,7 +32,7 @@
         </p>
         <input
         class="inputs"
-        name="txfCostProduction"
+        id="txfCostProduction"
         type="text"
         placeholder="ej: 13000 ó 1000;6000;500..."
         required>
@@ -44,7 +44,7 @@
         <p>Puede ingresar el total o sí desea también puede agregar los valores separados por el simbolo " ; "
         </p>
         <input 
-        name="txfCostFixed"
+        id="txfCostFixed"
         type="text"
         class="inputs"
         placeholder="ej: 370000 ó 60000;200000..."
@@ -55,7 +55,7 @@
         <p>Especifique el tiempo en el que desea conocer la cantidad de productos
         a vender para saber desde cuando obtendrá ganancias y pérdidas</p>
         <select 
-          name="cbxTime"
+          id="cbxTime"
           class="selects">
           <option value="month">Un mes</option>
           <option value="trimester">Trimestral</option>
@@ -65,11 +65,16 @@
       </section>
       </div>
       <div class="calculus">
-        <button onclick="calcular()">Calcular</button>
+        <button type="button" onclick="calcular()">Calcular</button>
       </div>
     </form>
-    <div id="resultado"></div>
+    <div class="result">
+      <p>La cantidad total de unidades que debe vender para estar en equilibrio son --> <span id="showUnities"> 0 </span><br>
+      El precio por las unidades que podrá obtener es <span id="showValue">$ 0</span>
+      </p>
+    </div>
     <canvas id="myChart"></canvas>
+    <script src="functions.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
